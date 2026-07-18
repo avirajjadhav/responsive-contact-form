@@ -9,9 +9,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js">
-      script
-    </script>
   </head>
   <body>
     <form action="" class="contact-form">
@@ -22,35 +19,40 @@
       <h1 class="form-title">Contact Form</h1>
       <p class="form-description">We'd love to hear from you.</p>
 
-      <div class="input-group">
+      <d class="input-group">
         <i class="fa-regular fa-user input-icon"></i>
-        <input type="text" placeholder="Enter your full name" />
-        <span class="error-message"></span>
+        <input type="text"
+          placeholder="Enter your full name"
+          id="contact-name"
+          onkeyup="NameValidate()"/>
+         <span id="name-error"></span>
       </div>
 
       <!-- Phone Number -->
       <div class="input-group">
         <i class="fa-solid fa-phone input-icon"></i>
         <input type="tel" placeholder="Enter your phone number" />
-        <span class="error-message"></span>
+        <span id="contact-error"></span>
       </div>
 
       <div class="input-group">
         <i class="fa-regular fa-envelope input-icon"></i>
         <input type="email" placeholder="Enter your email" />
-        <span class="error-message"></span>
+        <span id="email-error"> </span>
       </div>
 
       <div class="message-group">
         <i class="fa-regular fa-comment input-icon"></i>
         <textarea placeholder="Enter your message"></textarea>
-        <span class="error-message"></span>
+        <span id="message-error"></span>
       </div>
 
       <button type="submit" class="submit-btn">
         Send Message
         <i class="fa-solid fa-paper-plane"></i>
       </button>
+      <span id="submit-error"></span>
     </form>
   </body>
+  <script src="script.js"></script>
 </html>
