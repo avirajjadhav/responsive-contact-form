@@ -10,14 +10,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f8f9fa;
 }
 
 .form-container{
     border: 2px solid black;
     position: relative;
     border-radius: 12px;
-    width: 400px;
-    padding: 20px;
+    width: 350px;
+    padding: 20px 20px 10px;
     background: white;
 
 }
@@ -26,8 +27,9 @@ body{
 } */
  .form-title{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 .form-description{
@@ -35,26 +37,25 @@ body{
     margin-bottom: 20px;
     color: #555;
 }
+
 .form-logo{
     position: absolute;
-    top: -35px;
+    top: -20px;
     left: 50%;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: white;
+    border-radius: 40%;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #fff;   /* hides only the border behind the icon */
+    padding: 0 8px;     /* small horizontal padding only */
 }
 .form-logo i{
-    font-size: 38px;
+   font-size: 40px;
     color: #1b1f3b;
+    display: block;
+    line-height: 1;
 }
 .input-group input {
     width: 100%;
-    padding: 13px 15px 13px 45px;
+   padding: 11px 15px 11px 45px;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 8px;
@@ -79,8 +80,8 @@ body{
     padding: 12px;
     border: none;
     border-radius: 8px;
-    margin-top: 0.7rem;
-    margin-bottom: 0;
+    margin-top: 8px;
+    /* margin-bottom: 0; */
 
     background-color: #2563eb;
     color: white;
@@ -135,10 +136,14 @@ body{
     margin-top: 4px;
     min-height: 18px;
 }
-.success-border {
+/* .success-border {
+    border: 2px solid #28a745;
+} */
+
+.input-group input.success-border,
+.message-group textarea.success-border {
     border: 2px solid #28a745;
 }
-
 /* media queries */
    
 @media (max-width:600px){
@@ -161,9 +166,10 @@ body{
     }
     .form-logo{
         width: 40px;
-        height:70px ;
+        height:40px ;
+        top: -20px;
     }
     .form-logo i{
-       font-size: 30px;
+       font-size: 26px;
     }
 }
