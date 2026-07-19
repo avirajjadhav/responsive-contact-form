@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form action="" class="contact-form">
+    <form action="" class="form-container" onsubmit="return ValidateForm()">
       <div class="form-logo">
         <i class="fa-solid fa-envelope"></i>
       </div>
@@ -19,7 +19,7 @@
       <h1 class="form-title">Contact Form</h1>
       <p class="form-description">We'd love to hear from you.</p>
 
-      <d class="input-group">
+      <div class="input-group">
         <i class="fa-regular fa-user input-icon"></i>
         <input type="text"
           placeholder="Enter your full name"
@@ -31,19 +31,19 @@
       <!-- Phone Number -->
       <div class="input-group">
         <i class="fa-solid fa-phone input-icon"></i>
-        <input type="tel" placeholder="Enter your phone number" />
+        <input type="tel" placeholder="Enter your phone number"  id="contact-phone"  onkeyup="ContactValidate()"/>
         <span id="contact-error"></span>
       </div>
 
       <div class="input-group">
         <i class="fa-regular fa-envelope input-icon"></i>
-        <input type="email" placeholder="Enter your email" />
+        <input type="email" placeholder="Enter your email" id="contact-email" onkeyup="EmailValidate()" />
         <span id="email-error"> </span>
       </div>
 
       <div class="message-group">
         <i class="fa-regular fa-comment input-icon"></i>
-        <textarea placeholder="Enter your message"></textarea>
+        <textarea placeholder="Enter your message"  id="contact-message"  onkeyup="MessageValidate()"></textarea>
         <span id="message-error"></span>
       </div>
 
